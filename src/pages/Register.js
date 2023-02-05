@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 
 const Register = () => {
-    const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
     const [updateProfile, updating, error2] = useUpdateProfile(auth);
     const handleSignup = async (e)=>{
         e.preventDefault()
@@ -14,20 +14,21 @@ const Register = () => {
         const password = e.target.password.value;
         const confirmPassword = e.target.confirmPassword.value;
 
-        if(password === confirmPassword){
-           await  createUserWithEmailAndPassword(email, password)
-           const success = await updateProfile({displayName: name})
-        }
-        else{
+        if(password !== confirmPassword){
             toast.error('Password not match')
-            console.log('okkk')
+            return
         }
+        await  createUserWithEmailAndPassword(email, password)
+        const success = await updateProfile({displayName: name})
+
+        e.target.reset()
     }
 
     if(error){
         toast.error(error.message)
     }
     if(user){
+        console.log(user)
         toast.success('Successfully signed up')
     }
     

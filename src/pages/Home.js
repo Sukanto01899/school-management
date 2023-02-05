@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { useSignOut } from 'react-firebase-hooks/auth';
 import { CiCircleList, CiGrid41, CiMemoPad, CiSettings, CiShop, CiSquareChevRight, CiText, CiUser, CiViewTable, CiViewTimeline } from "react-icons/ci";
 import { Outlet, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import auth from '../firebase.init';
 
 const Home = () => {
     const [open, setOpen] = useState(true);
+    const [signOut, loading, error] = useSignOut(auth);
     const navigate = useNavigate()
     const menus = [
         {name: 'Dashboard', icon: <CiGrid41/>},
@@ -42,8 +46,14 @@ const Home = () => {
                     <div>
                         <input className='border-2 outline-none py-1 px-2 rounded-md' type="text" placeholder='Search'/>
                     </div>
-                    <div>
+                    <div className='flex space-x-4'>
                         <h4>Sukanto</h4>
+                        <button onClick={async ()=> {
+                            const success = await signOut();
+                            if(success){
+                                toast.success('Successfully signed out')
+                            }
+                            }}>Logout</button>
                     </div>
                 </div>
                 <div>
