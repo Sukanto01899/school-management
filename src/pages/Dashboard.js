@@ -51,7 +51,7 @@ const Dashboard = () => {
     return (
         <div className='px-5'>
           <div>
-            <h1>Welcome to Dashboard</h1>
+            <h1 className='text-2xl mt-5 font-semibold'>Welcome to Dashboard</h1>
           </div>
             {/* Head Data */}
             <div className='grid grid-cols-1 lg:grid-cols-4 gap-5 mt-5'>

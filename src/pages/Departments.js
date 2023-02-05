@@ -1,11 +1,11 @@
 import React from 'react';
-import Student from '../components/Student';
+import Department from '../components/Department';
 
-const Students = () => {
+const Departments = () => {
     return (
         <div className='px-5 mt-8 mb-8'>
             <div>
-                <h1 className='text-2xl font-semibold'>Students</h1>
+                <h1 className='text-2xl font-semibold'>Departments</h1>
             </div>
             <div className='flex space-y-2 lg:space-y-0 flex-col lg:flex-row justify-between mt-5'>
                 <input className='h-10 w-60 outline-none px-3 rounded-md border-1' type="text" placeholder='Search by ID...'/>
@@ -15,18 +15,9 @@ const Students = () => {
             </div>
             <div className='mt-5 bg-white px-3 py-5 rounded-md'>
                 <div className='flex justify-between items-center'>
-                    <h3 className='text-xl text-semibold'>All Students</h3>
-                    <button className='py-2 rounded-md bg-indigo-700 text-white px-5'>Add Student</button>
-               </div>
-               <div className='mt-5 mb-3'>
-                <label htmlFor="entries">Show</label>
-                <select className='border-2 outline-none focus:border-indigo-700 py-1 px-2 ml-2' id='entries'>
-                    <option value="10">5</option>
-                    <option value="10">10</option>
-                    <option value="10">20</option>
-                    <option value="10">50</option>
-                </select>
-               </div>
+                    <h3 className='text-xl text-semibold'>All Departments</h3>
+                    <button className='py-2 rounded-md bg-indigo-700 text-white px-5'>Add Department</button>
+                </div>
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
     <table class="w-full text-sm text-left">
         <thead class="text-xs text-gray-100 uppercase bg-indigo-700">
@@ -41,19 +32,13 @@ const Students = () => {
                     Name
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Class
+                    HOD
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    DOB
+                    Started Year
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Parent Name
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Number
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Address
+                    No of Student
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Action
@@ -61,10 +46,7 @@ const Students = () => {
             </tr>
         </thead>
         <tbody>
-            <Student/>
-            <Student/>
-            <Student/>
-            <Student/>
+            <Department/>
            
         </tbody>
     </table>
@@ -82,4 +64,4 @@ const Students = () => {
     );
 };
 
-export default Students;
+export default Departments;

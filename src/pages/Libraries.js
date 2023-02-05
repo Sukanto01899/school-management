@@ -1,11 +1,11 @@
 import React from 'react';
-import Student from '../components/Student';
+import Book from '../components/Book';
 
-const Students = () => {
+const Libraries = () => {
     return (
         <div className='px-5 mt-8 mb-8'>
             <div>
-                <h1 className='text-2xl font-semibold'>Students</h1>
+                <h1 className='text-2xl font-semibold'>Library</h1>
             </div>
             <div className='flex space-y-2 lg:space-y-0 flex-col lg:flex-row justify-between mt-5'>
                 <input className='h-10 w-60 outline-none px-3 rounded-md border-1' type="text" placeholder='Search by ID...'/>
@@ -15,8 +15,8 @@ const Students = () => {
             </div>
             <div className='mt-5 bg-white px-3 py-5 rounded-md'>
                 <div className='flex justify-between items-center'>
-                    <h3 className='text-xl text-semibold'>All Students</h3>
-                    <button className='py-2 rounded-md bg-indigo-700 text-white px-5'>Add Student</button>
+                    <h3 className='text-xl text-semibold'>All Book</h3>
+                    <button className='py-2 rounded-md bg-indigo-700 text-white px-5'>Add Book</button>
                </div>
                <div className='mt-5 mb-3'>
                 <label htmlFor="entries">Show</label>
@@ -32,28 +32,25 @@ const Students = () => {
         <thead class="text-xs text-gray-100 uppercase bg-indigo-700">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    <input className='h-4 w-4' type="checkbox" />
-                </th>
-                <th scope="col" class="px-6 py-3">
                     ID
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Name
                 </th>
                 <th scope="col" class="px-6 py-3">
+                    Language
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Department
+                </th>
+                <th scope="col" class="px-6 py-3">
                     Class
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    DOB
+                    Type
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Parent Name
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Number
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Address
+                    Status
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Action
@@ -61,11 +58,8 @@ const Students = () => {
             </tr>
         </thead>
         <tbody>
-            <Student/>
-            <Student/>
-            <Student/>
-            <Student/>
-           
+            
+           <Book/>
         </tbody>
     </table>
 </div>
@@ -82,4 +76,4 @@ const Students = () => {
     );
 };
 
-export default Students;
+export default Libraries;
