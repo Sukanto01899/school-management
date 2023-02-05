@@ -1,10 +1,10 @@
 import React from 'react';
-import { FiEdit, FiX } from "react-icons/fi";
+import { FiEdit, FiX } from 'react-icons/fi';
 
-const Student = () => {
+const Teacher = () => {
     return (
         <>
-            <tr class="bg-white">
+             <tr class="bg-white">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                     <input type="checkbox" />
                 </th>
@@ -16,19 +16,22 @@ const Student = () => {
                     <span>Sukanto</span>
                 </td>
                 <td class="px-6 py-4">
-                    10A
+                    10
                 </td>
                 <td class="px-6 py-4">
-                13 FEB 2001
+                    Male
                 </td>
                 <td class="px-6 py-4">
-                    Sunil FDAS
+                    Biology
                 </td>
                 <td class="px-6 py-4">
-                    01860385185
+                    A
                 </td>
                 <td class="px-6 py-4">
-                    Chittagong
+                    01400424010
+                </td>
+                <td class="px-6 py-4">
+                    Kutubdia
                 </td>
                 <td class="px-6 py-4">
                 <div className='flex space-x-5'>
@@ -41,4 +44,4 @@ const Student = () => {
     );
 };
 
-export default Student;
+export default Teacher;

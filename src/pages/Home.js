@@ -37,7 +37,7 @@ const Home = () => {
             </div>
 
             {/* Home Page */}
-            <div className='bg-[#e2e8f0] lg:ml-3 w-full'>
+            <div className='bg-[#f1f3f7] w-full'>
                 <div className='flex justify-between items-center px-8 bg-white w-full h-12'>
                     <div>
                         <input className='border-2 outline-none py-1 px-2 rounded-md' type="text" placeholder='Search'/>
