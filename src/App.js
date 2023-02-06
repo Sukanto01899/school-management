@@ -3,6 +3,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import RequireAuth from './components/RequireAuth';
+import AddStudent from './pages/adding-page/AddStudent';
+import UpdateStudent from './pages/adding-page/UpdateStudent';
 import Blogs from './pages/Blogs';
 import Dashboard from './pages/Dashboard';
 import Departments from './pages/Departments';
@@ -24,6 +26,8 @@ function App() {
         <Route path='/' element={<Dashboard/>}></Route>
         <Route path='/dashboard' element={<Dashboard/>}></Route>
         <Route path='/students' element={<Students/>}></Route>
+        <Route path='/add-student' element={<AddStudent/>}></Route>
+        <Route path='/update-student/:studentid' element={<UpdateStudent/>}></Route>
         <Route path='/teachers' element={<Teachers/>}></Route>
         <Route path='/department' element={<Departments/>}></Route>
         <Route path='/subject' element={<Subjects/>}></Route>

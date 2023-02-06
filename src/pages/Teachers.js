@@ -18,7 +18,15 @@ const Teachers = () => {
                     <h3 className='text-xl text-semibold'>All Teachers</h3>
                     <button className='py-2 rounded-md bg-indigo-700 text-white px-5'>Add Teacher</button>
                 </div>
-                
+                <div className='mt-5 mb-3'>
+                <label htmlFor="entries">Show</label>
+                <select className='border-2 outline-none focus:border-indigo-700 py-1 px-2 ml-2' id='entries'>
+                    <option value="10">5</option>
+                    <option value="10">10</option>
+                    <option value="10">20</option>
+                    <option value="10">50</option>
+                </select>
+               </div>
                 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
     <table class="w-full text-sm text-left">

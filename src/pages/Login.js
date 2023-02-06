@@ -2,7 +2,7 @@ import React from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import auth from '../firebase.init';
+import { auth } from '../firebase.init';
 
 const Login = () => {
     const navigate = useNavigate();

@@ -8,3 +8,9 @@
 .form-style input {
   @apply block w-80 outline-none border-2 mt-4 px-4 text-lg rounded-md h-12;
 }
+.add-form-style input:not([type="file"]) {
+  @apply w-full outline-none border-2 h-12 px-3 mt-2 rounded-md;
+}
+.add-form-style select {
+  @apply border-2 w-full outline-none h-12 px-3 mt-2 rounded-md;
+}

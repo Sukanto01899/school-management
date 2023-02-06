@@ -3,7 +3,7 @@ import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
 import { CiCircleList, CiGrid41, CiMemoPad, CiSettings, CiShop, CiSquareChevRight, CiText, CiUser, CiViewTable, CiViewTimeline } from "react-icons/ci";
 import { Outlet, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import auth from '../firebase.init';
+import { auth } from '../firebase.init';
 
 const Home = () => {
     const [open, setOpen] = useState(true);
