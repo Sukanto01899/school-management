@@ -6,7 +6,7 @@ import { storage } from '../firebase.init';
 const useUpload = () => {
     const [file, setFile] = useState(null);
     const [imgLink, setImgLink] = useState('');
-    const [uploadStatus, setUploadStatus] = useState(false)
+    const [uploadStatus, setUploadStatus] = useState(true)
 
     const uploadImage = (e)=>{
         setUploadStatus(false)

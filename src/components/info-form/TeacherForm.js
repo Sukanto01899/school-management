@@ -28,9 +28,9 @@ const StudentForm = ({studentData, setStudentData, handleSubmit}) => {
                 <div>
                 <label htmlFor="gender">Gender</label>
                 <select name="gender" id="gender" onChange={(e)=> setGender(e.target.value)} value={gender}>
-                    <option selected value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Other</option>
                 </select>
                 </div>
              
@@ -61,7 +61,7 @@ const StudentForm = ({studentData, setStudentData, handleSubmit}) => {
                 <div>
                 <label htmlFor="class">Class</label>
                 <select onChange={(e)=> setStuClass(e.target.value)} name="class" id="class" value={stuClass}>
-                    <option selected value="11">11</option>
+                    <option value="11">11</option>
                     <option value="12">12</option>
                     <option value="13">13</option>
                 </select>
@@ -72,7 +72,7 @@ const StudentForm = ({studentData, setStudentData, handleSubmit}) => {
                 <div>
                 <label htmlFor="section">Section</label>
                 <select onChange={(e)=> setSection(e.target.value)} name="section" id="section" value={section}>
-                    <option selected value="A">A</option>
+                    <option value="A">A</option>
                     <option value="B">B</option>
                     <option value="C">C</option>
                     <option value="D">D</option>
@@ -96,11 +96,8 @@ const StudentForm = ({studentData, setStudentData, handleSubmit}) => {
                 </div>
 
                 <div>
-                <div>
                 <label className='text-lg font-semibold' htmlFor="file">Upload Student Photo (150px X 150px)</label>
                 <input type="file" name="" id="" onChange={uploadImage}/>
-                </div>
-                <span>{!uploadStatus && 'Uploading...'}</span>
                 </div>
              </div>
 

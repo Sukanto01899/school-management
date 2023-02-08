@@ -1,8 +1,10 @@
 import React from 'react';
 import { FcCurrencyExchange, FcDepartment, FcDonate, FcManager } from "react-icons/fc";
 import { Bar, BarChart, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import useStudent from '../hooks/useStudent';
 
 const Dashboard = () => {
+  const [students] = useStudent(0)
 
     const data = [
         {
@@ -58,7 +60,7 @@ const Dashboard = () => {
                 <div className='main-data'>
                     <div>
                         <h3>Student</h3>
-                        <h4>5646</h4>
+                        <h4>{students}</h4>
                     </div>
                     <div>
                     <FcManager className='text-5xl'/>
@@ -89,7 +91,7 @@ const Dashboard = () => {
 
 
             {/* Chart Data */}
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8 overflow-x-auto'>
 
             {/* Chart */}
                 <div className='bg-white px-4 py-6 rounded-md'>
